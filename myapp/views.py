@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import BlogForm
 from django.utils import timezone
-from .models import Blog
+from .models import Post
 
 # Create your views here.
 
@@ -21,5 +21,5 @@ def write(request):
         return render(request, 'write.html', {'form':form})
 
 def read(request):
-    blogs = Blog.objects
+    blogs = Post.objects
     return render(request, 'read.html', {'blogs':blogs})
