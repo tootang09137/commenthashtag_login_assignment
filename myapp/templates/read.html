@@ -8,8 +8,9 @@
             <div class="col-lg-10">
                 <h2>Read</h2><br><br>
                 {% for blogs in blogs.all %} 
-                <h3>제목 : {{blogs.title}}</h3>
+                <h3>제목 : <a href="{% url 'detail' blogs.id %}">{{blogs.title}}</a></h3>
                 <h4>내용 : {{blogs.content}}</h4>
+                <h5>이미지 : {{blogs.image}}</h5>
                 <p>작성일 : {{blogs.pub_date}}</p><hr>
                 {% endfor %}
             </div>
