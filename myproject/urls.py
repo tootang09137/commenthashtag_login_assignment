@@ -28,6 +28,7 @@ urlpatterns = [
     path('detail/<str:id>/', myapp.views.detail, name='detail'),
     path('edit/<str:id>/', myapp.views.edit, name='edit'),
     path('delete/<str:id>/', myapp.views.delete, name='delete'),
+    path('hashtag/', myapp.views.hashtag, name='hashtag'),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
 
