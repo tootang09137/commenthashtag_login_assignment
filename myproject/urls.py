@@ -19,6 +19,7 @@ from django.urls import path
 import myapp.views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,6 +30,7 @@ urlpatterns = [
     path('edit/<str:id>/', myapp.views.edit, name='edit'),
     path('delete/<str:id>/', myapp.views.delete, name='delete'),
     path('hashtag/', myapp.views.hashtag, name='hashtag'),
+    path('', include('account.urls')),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
 

@@ -5,6 +5,7 @@ class BlogForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['title', 'content', 'image', 'hashtags']
+
 class CommentForm(forms.ModelForm) :
     class Meta :
         model = Comment
